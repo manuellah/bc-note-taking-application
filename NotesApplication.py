@@ -17,6 +17,7 @@ class NotesApplication(object):
             print(item)
             print()
             print("By Author","  ", self.author)
+            print("==============================================")
 
     
     def get(self, note_id):
@@ -30,7 +31,7 @@ class NotesApplication(object):
             if search_text in item:
                 print
                 self.list()
-                print("==============================================")
+                
             
     def delete(self, note_id):
         self.note_list.pop(note_id)
@@ -45,4 +46,5 @@ s.create()
 s.create()
 s.search("qusai")
 s.list()
+
     
