@@ -1,4 +1,6 @@
 class NotesApplication(object):
+    note_content=raw_input("What do you have in mind!!!!???")
+    
     notes_id=0
     def __init__(self,author="Author"):
         self.author=author
@@ -29,13 +31,12 @@ class NotesApplication(object):
                 print
                 self.list()
                 print("==============================================")
-                
             
-    
     def delete(self, note_id):
-        pass
+        self.note_list.pop(note_id)
     
     def edit(self, note_id, new_content):
-        pass
+        note_content = raw_input("Write you edit text here") 
+        self.note_list[note_id]=new_content
     
         
