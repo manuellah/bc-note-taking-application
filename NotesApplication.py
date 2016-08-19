@@ -29,12 +29,15 @@ class NotesApplication(object):
     
     def search(self, search_text):
         notes_index_list=[]
-        print("Showing results for search ", search_text)
+        
         for item in self.note_list:
             item=str(item)
             if search_text in item:
-                print
+                print("Showing results for search ", search_text)
                 self.list()
+            else:
+                print("Not in my notes notes, please check in the net, lol")
+                break
                 
             
     def delete(self, note_id):
@@ -52,8 +55,7 @@ s=NotesApplication("Emmanuel")
 s.create("MMamamams rrdididid")
 s.create("Usdsdsd sajsd dddfdfdfd")
 s.create("Dadadsdf sdd sdsdfsf sfsfsds")
-print(s.edit(0, "mama yangu mama"))
-s.list()
+s.search("rrdididid")
 
 
 
