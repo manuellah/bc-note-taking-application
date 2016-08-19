@@ -8,6 +8,10 @@ class NotesApplication(object):
         self.id=NotesApplication.notes_id
         
     def create(self, note_content=""):
+        if note_content:
+            self.note_list.append(note_content)
+            return
+
         note_content=input("What do you have in mind!!!!???  :   ")
         self.note_list.append(note_content)
     
@@ -37,14 +41,16 @@ class NotesApplication(object):
         self.note_list.pop(note_id)
     
     def edit(self, note_id, new_content):
-        new_content = input("Write you edit text here   :")
+        new_content = input("Write you edit text here  :   ")
         self.note_list[note_id]=new_content
     
 s=NotesApplication("Emmanuel")
-s.create()
-s.create()
-s.create()
-s.search("qusai")
+s.create("MMamamams rrdididid")
+s.create("Usdsdsd sajsd dddfdfdfd")
+s.create("Dadadsdf sdd sdsdfsf sfsfsds")
 s.list()
+
+
+
 
     
