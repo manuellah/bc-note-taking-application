@@ -1,14 +1,15 @@
 class NotesApplication(object):
     notes_id=0
-    note_list=[]
+    
     def __init__(self,author="Author"):
         self.author=author
+        self.note_list=[]
         NotesApplication.notes_id+=1
         self.id=NotesApplication.notes_id
         
     def create(self, note_content=""):
         note_content=input("What do you have in mind!!!!???  :   ")
-        NotesApplication.note_list.append(note_content)
+        self.note_list.append(note_content)
     
     def list(self):
         for item in self.note_list:
@@ -40,8 +41,8 @@ class NotesApplication(object):
     
 s=NotesApplication("Emmanuel")
 s.create()
+s.create()
+s.create()
+s.search("qusai")
 s.list()
-print(s.get(0))
-
-        
     
