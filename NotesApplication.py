@@ -40,7 +40,11 @@ class NotesApplication(object):
     def delete(self, note_id):
         self.note_list.pop(note_id)
     
-    def edit(self, note_id, new_content):
+    def edit(self, note_id, new_content=""):
+        if new_content:
+            self.note_list[note_id]=new_content
+            return
+            
         new_content = input("Write you edit text here  :   ")
         self.note_list[note_id]=new_content
     
@@ -48,6 +52,7 @@ s=NotesApplication("Emmanuel")
 s.create("MMamamams rrdididid")
 s.create("Usdsdsd sajsd dddfdfdfd")
 s.create("Dadadsdf sdd sdsdfsf sfsfsds")
+print(s.edit(0, "mama yangu mama"))
 s.list()
 
 
