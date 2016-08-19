@@ -1,13 +1,12 @@
 class NotesApplication(object):
     notes_id=0
-    
     def __init__(self,author="Author"):
         self.author=author
         self.note_list=[]
         NotesApplication.notes_id+=1
         self.id=NotesApplication.notes_id
         
-    def create(self, note_content=raw_input("What do you have in mind!!!!???")):
+    def create(self, note_content=input("What do you have in mind!!!!???")):
         self.note_list.append(note_content)
     
     def list(self):
@@ -34,10 +33,13 @@ class NotesApplication(object):
     def delete(self, note_id):
         self.note_list.pop(note_id)
     
-    def edit(self, note_id, new_content):
-        note_content = raw_input("Write you edit text here") 
+    def edit(self, note_id, new_content = input("Write you edit text here")):
         self.note_list[note_id]=new_content
     
 s=NotesApplication("Emmanuel")
 s.create()
+s.list()
+s.get(0)
+s.search("qusai")
+#s.edit(0)
         
