@@ -55,7 +55,7 @@ s=NotesApplication("Emmanuel")
 s.create("MMamamams rrdididid")
 s.create("Usdsdsd sajsd dddfdfdfd")
 s.create("Dadadsdf sdd sdsdfsf sfsfsds")
-s.search("rrdididid")
+s.search("rrdididd")
 
 
 
