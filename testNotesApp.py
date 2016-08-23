@@ -49,7 +49,10 @@ class TestNotesApp(unittest.TestCase):
         self.assertEqual(x,y+1)
 
     def test_edit(self):
-        pass
+        myApp=NotesApplication("Emmanuel")
+        myApp.create('Notes for class 1')
+        myApp.edit(0,'Notes for class 2')
+        self.assertEqual(myApp.get(0),'Notes for class 2')
         
 
     
